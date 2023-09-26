@@ -6,11 +6,14 @@
     font-size: 2vmin;
 }
 
+body{
+    overflow: hidden;
+}
+
 nav ul{
     position: fixed;
     top: 0;
     width: 100vw;
-
 }
 
 nav li{
@@ -30,6 +33,7 @@ nav a{
     padding-bottom: 3vh;
     justify-content: center;
     background-color: #426342;
+    transition: background-color, border-radius 350ms ease;
     
 }
 
@@ -38,10 +42,123 @@ a:hover{
     border-radius: 12px;
 }
 
-main{
-    margin-top: 9vh;
+a:focus{
+    background-color: #669966;
+    border-radius: 12px;
 }
+
+main{
+    overflow-y: scroll;
+    position: absolute;
+    top: 9vh;
+    bottom: 6vh;
+    width: 100vw;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar{
+   width: 2vw;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #C8B1E8;
+    border-radius: 4vh;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #61507A;
+} 
 
 h1{
     color: #61507A;
+    font-size: 5vmin;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+div{
+    width: 35vw;
+    margin: 7vmin;
+    background-color: aqua;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    transition: transform 1s ease, translate 1s ease;
+}
+
+div > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+div img{
+    width: 35vmin;
+    height: 35vmin;
+    border-radius: 10vmin;
+    object-fit: cover;
+    justify-self: center;
+    display: flex;   
+}
+
+div p{
+    display: none;
+}
+
+button{
+    top: -100%;
+    background: none;
+    font-size: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    color: #98bb98;
+}
+
+div:focus-within{
+   transform: scale(2,2) translate(20vw,10vh);
+}
+
+div:focus-within p{
+    display: block;
+}
+
+div:focus-within button:hover{
+    background: none;
+    font-size: 0;
+}
+
+div:focus-within div:hover button{
+    background: none;
+    font-size: 0;
+}
+
+div:hover button{
+    background-color: #61507a99;
+    font-size: 5vw;
+    height: 35vmin;
+    width: 35vmin;
+    border-radius: 10vmin;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: #61507A;
+    color: #98bb98;
+    width: 100vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    justify-content: center;
+    display: flex;
+    height: 6vh;
 }
