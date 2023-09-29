@@ -33,7 +33,7 @@ nav a{
     padding-bottom: 3vh;
     justify-content: center;
     background-color: #426342;
-    transition: background-color, border-radius 350ms ease;
+    transition: background-color 500ms ease, border-radius 350ms ease;
     
 }
 
@@ -73,30 +73,32 @@ h1{
     color: #61507A;
     font-size: 5vmin;
     font-weight: 700;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 section{
-    display: flex;
-    align-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 7vw;
+    justify-content: space-evenly;
 }
 
-div{
-    width: 35vw;
-    margin: 7vmin;
-    background-color: aqua;
+figure{
+    width: fit-content;
     display: grid;
+    width: 35vmin;
+    height: 35vmin;
+    align-items: center;
     grid-template: 1fr / 1fr;
     transition: transform 1s ease, translate 1s ease;
 }
 
-div > * {
+figure > * {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }
-div img{
+figure img{
     width: 35vmin;
     height: 35vmin;
     border-radius: 10vmin;
@@ -105,8 +107,16 @@ div img{
     display: flex;   
 }
 
-div p{
-    display: none;
+figure p{
+    opacity: 0;
+    visibility: hidden;
+    background-color: #61507a99;
+    color: #98bb98;
+    border-radius: 10vmin;
+    height: 100%;
+    width: 100%;
+    transition: opacity 500ms ease;
+    text-align: center;
 }
 
 button{
@@ -124,25 +134,30 @@ button{
     color: #98bb98;
 }
 
-div:focus-within{
-   transform: scale(2,2) translate(20vw,10vh);
+figure:focus-within:nth-child(odd){
+   transform: translate(24vw,20vh) scale(2,2);
 }
 
-div:focus-within p{
-    display: block;
-}
+figure:focus-within:nth-child(even){
+    transform: translate(-23vw,20vh) scale(2,2);
+ }
 
-div:focus-within button:hover{
+figure:focus-within button:hover{
     background: none;
     font-size: 0;
 }
 
-div:focus-within div:hover button{
+figure:focus-within:hover p{
+    visibility: visible;
+    opacity: 1;
+}
+
+figure:hover:focus-within button{
     background: none;
     font-size: 0;
 }
 
-div:hover button{
+figure:hover button{
     background-color: #61507a99;
     font-size: 5vw;
     height: 35vmin;
