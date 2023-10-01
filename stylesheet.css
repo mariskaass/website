@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     font-family: monospace;
@@ -6,23 +6,23 @@
     font-size: 2vmin;
 }
 
-body{
+body {
     overflow: hidden;
 }
 
-nav ul{
+nav ul {
     position: fixed;
     top: 0;
     width: 100vw;
 }
 
-nav li{
+nav li {
     float: left;
     list-style-type: none;
     background-color: #426342;
 }
 
-nav a{
+nav a {
     
     color:#C8B1E8;
     font-size: 2.5vmin ;
@@ -37,17 +37,17 @@ nav a{
     
 }
 
-a:hover{
+a:hover {
     background-color: #669966;
     border-radius: 12px;
 }
 
-a:focus{
+a:focus {
     background-color: #669966;
     border-radius: 12px;
 }
 
-main{
+main {
     overflow-y: scroll;
     position: absolute;
     top: 9vh;
@@ -56,20 +56,20 @@ main{
     scrollbar-width: thin;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
    width: 2vw;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: #C8B1E8;
     border-radius: 4vh;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background: #61507A;
 } 
 
-h1{
+h1 {
     color: #61507A;
     font-size: 5vmin;
     font-weight: 700;
@@ -77,14 +77,14 @@ h1{
     text-align: center;
 }
 
-section{
+section {
     display: grid;
     grid-template-columns: auto auto;
     gap: 7vw;
     justify-content: space-evenly;
 }
 
-figure{
+figure {
     width: fit-content;
     display: grid;
     width: 35vmin;
@@ -98,7 +98,7 @@ figure > * {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }
-figure img{
+figure img {
     width: 35vmin;
     height: 35vmin;
     border-radius: 10vmin;
@@ -107,7 +107,7 @@ figure img{
     display: flex;   
 }
 
-figure p{
+figure figcaption{
     opacity: 0;
     visibility: hidden;
     background-color: #61507a99;
@@ -117,9 +117,10 @@ figure p{
     width: 100%;
     transition: opacity 500ms ease;
     text-align: center;
+    padding-top: 13vmin;
 }
 
-button{
+button {
     top: -100%;
     background: none;
     font-size: 0;
@@ -134,30 +135,30 @@ button{
     color: #98bb98;
 }
 
-figure:focus-within:nth-child(odd){
+figure:focus-within:nth-child(odd) {
    transform: translate(24vw,20vh) scale(2,2);
 }
 
-figure:focus-within:nth-child(even){
+figure:focus-within:nth-child(even) {
     transform: translate(-23vw,20vh) scale(2,2);
  }
 
-figure:focus-within button:hover{
+figure:focus-within button:hover {
     background: none;
     font-size: 0;
 }
 
-figure:focus-within:hover p{
+figure:focus-within:hover figcaption{
     visibility: visible;
     opacity: 1;
 }
 
-figure:hover:focus-within button{
+figure:hover:focus-within button {
     background: none;
     font-size: 0;
 }
 
-figure:hover button{
+figure:hover button {
     background-color: #61507a99;
     font-size: 5vw;
     height: 35vmin;
@@ -165,7 +166,7 @@ figure:hover button{
     border-radius: 10vmin;
 }
 
-footer{
+footer {
     position: fixed;
     bottom: 0;
     background-color: #61507A;
