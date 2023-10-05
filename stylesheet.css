@@ -10,6 +10,7 @@ body {
     overflow: hidden;
 }
 
+/* de styling van de nav bar */
 nav ul {
     position: fixed;
     top: 0;
@@ -46,7 +47,7 @@ a:focus {
     background-color: #669966;
     border-radius: 12px;
 }
-
+/* de styling van de main */
 main {
     overflow-y: scroll;
     position: absolute;
@@ -77,14 +78,19 @@ h1 {
     text-align: center;
 }
 
-section {
+p {
+    margin: 2vmin;
+}
+
+/* de styling van de plaatjes */
+main ul {
     display: grid;
     grid-template-columns: auto auto;
     gap: 7vw;
     justify-content: space-evenly;
 }
 
-figure {
+main li {
     width: fit-content;
     display: grid;
     width: 35vmin;
@@ -94,20 +100,21 @@ figure {
     transition: transform 1s ease, translate 1s ease;
 }
 
-figure > * {
+main li > * {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }
-figure img {
+main img {
     width: 35vmin;
     height: 35vmin;
     border-radius: 10vmin;
     object-fit: cover;
     justify-self: center;
     display: flex;   
+    transition: border-radius 200ms ease;
 }
 
-figure figcaption{
+main li p{
     opacity: 0;
     visibility: hidden;
     background-color: #61507a99;
@@ -117,7 +124,8 @@ figure figcaption{
     width: 100%;
     transition: opacity 500ms ease;
     text-align: center;
-    padding-top: 13vmin;
+    padding: 12vmin 2vmin 0 2vmin;
+    margin: 0;
 }
 
 button {
@@ -135,30 +143,32 @@ button {
     color: #98bb98;
 }
 
-figure:focus-within:nth-child(odd) {
+/* de functionaliteiten van plaatjes */
+main li:focus-within:nth-child(odd) {
    transform: translate(24vw,20vh) scale(2,2);
 }
 
-figure:focus-within:nth-child(even) {
+main li:focus-within:nth-child(even) {
     transform: translate(-23vw,20vh) scale(2,2);
  }
 
-figure:focus-within button:hover {
+main li:focus-within button:hover {
     background: none;
     font-size: 0;
 }
 
-figure:focus-within:hover figcaption{
+main li:focus-within:hover p{
     visibility: visible;
     opacity: 1;
+    border-radius: 2vmin;
 }
 
-figure:hover:focus-within button {
+main li:hover:focus-within button {
     background: none;
     font-size: 0;
 }
 
-figure:hover button {
+main li:hover button {
     background-color: #61507a99;
     font-size: 5vw;
     height: 35vmin;
@@ -166,13 +176,17 @@ figure:hover button {
     border-radius: 10vmin;
 }
 
+main li:focus-within img{
+    border-radius: 2vmin;
+}
+
+/* styling van footer */
 footer {
     position: fixed;
     bottom: 0;
     background-color: #61507A;
     color: #98bb98;
     width: 100vw;
-    padding-top: 2vh;
     padding-bottom: 2vh;
     justify-content: center;
     display: flex;
