@@ -39,14 +39,16 @@ nav a {
 }
 
 a:hover {
-    background-color: #669966;
-    border-radius: 12px;
+    background-color: #98bb98;
+    border-radius: 2vmin;
+    color: #61507A;
 }
 
 a:focus {
     background-color: #669966;
-    border-radius: 12px;
+    border-radius: 2vmin;
 }
+
 /* de styling van de main */
 main {
     overflow-y: scroll;
@@ -57,19 +59,6 @@ main {
     scrollbar-width: thin;
 }
 
-::-webkit-scrollbar {
-   width: 2vw;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #C8B1E8;
-    border-radius: 4vh;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #61507A;
-} 
-
 h1 {
     color: #61507A;
     font-size: 5vmin;
@@ -78,9 +67,33 @@ h1 {
     text-align: center;
 }
 
-p {
-    margin: 2vmin;
+p, h2 {
+    margin: 0 0 1vmin 2vmin;
 }
+
+main a {
+    text-decoration: none;
+    background-color: #C8B1E8;
+    padding: 1vmin;
+    color: #426342;
+    border-radius: 2vmin;
+    display: inline-block;
+    margin: 1vh 0 2vh 2vmin;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 2vw;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+     background: #C8B1E8;
+     border-radius: 4vh;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+     background: #61507A;
+ } 
 
 /* de styling van de plaatjes */
 main ul {
@@ -180,6 +193,24 @@ main li:focus-within img{
     border-radius: 2vmin;
 }
 
+/* contact me plaatjes */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2vmin 7vmin 5vmin 7vmin;
+    background-color: #98bb98;
+    padding: 1vmin 0 1vmin 0;
+    border-radius: 2vmin;
+}
+
+section img {
+    border-radius: 5vmin;
+    width: 20vw;
+    height: 20vw;
+    margin-left: 62vw;
+}
+
 /* styling van footer */
 footer {
     position: fixed;
@@ -191,4 +222,8 @@ footer {
     justify-content: center;
     display: flex;
     height: 6vh;
+}
+
+footer p {
+    margin: 2.5vh 0 0 0;
 }
