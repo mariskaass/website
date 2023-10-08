@@ -45,7 +45,7 @@ a:hover {
 }
 
 a:focus {
-    background-color: #669966;
+    background-color: #98bb98;
     border-radius: 2vmin;
 }
 
@@ -127,7 +127,7 @@ main img {
     transition: border-radius 200ms ease;
 }
 
-main li p{
+main li p {
     opacity: 0;
     visibility: hidden;
     background-color: #61507a99;
@@ -137,8 +137,10 @@ main li p{
     width: 100%;
     transition: opacity 500ms ease;
     text-align: center;
-    padding: 12vmin 2vmin 0 2vmin;
     margin: 0;
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
 
 button {
@@ -170,7 +172,7 @@ main li:focus-within button:hover {
     font-size: 0;
 }
 
-main li:focus-within:hover p{
+main li:focus-within:hover p {
     visibility: visible;
     opacity: 1;
     border-radius: 2vmin;
@@ -189,7 +191,7 @@ main li:hover button {
     border-radius: 10vmin;
 }
 
-main li:focus-within img{
+main li:focus-within img {
     border-radius: 2vmin;
 }
 
@@ -204,11 +206,16 @@ section {
     border-radius: 2vmin;
 }
 
-section img {
+.contact img {
     border-radius: 5vmin;
     width: 20vw;
     height: 20vw;
     margin-left: 62vw;
+}
+
+main a {
+    display: block;
+    margin-right: 2vmin;
 }
 
 /* styling van footer */
